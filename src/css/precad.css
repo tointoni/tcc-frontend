@@ -1,0 +1,54 @@
+.conteiner-cad .voltar {
+    position: absolute;
+}
+
+.conteiner-grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.buttona {
+    background-color: transparent;
+    border: 0;
+    font-size: 28px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.buttonb {
+    background-color: transparent;
+    border: 0;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 319px 200px;
+    height: 100%;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.conteiner-grid1 .grid1 {
+    transition: all .3s;
+}
+
+.conteiner-grid1 .buttona:hover{
+    transform: scale(1.3);
+}
+
+.conteiner-grid1 .buttonb:hover{
+    transform: scale(1.3);
+}
+
+.conteiner-grid1 .grid2 {
+    transition: all .3s;
+}
+
+.conteiner-grid1 .grid1:hover {
+    background-color: cornflowerblue;
+}
+
+.conteiner-grid1 .grid2:hover {
+    background-color: cornflowerblue;
+}

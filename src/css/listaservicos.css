@@ -1,0 +1,123 @@
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  #app main {
+    margin-left: 30px;
+  }
+  
+ 
+.conteiner-head1{
+  background-color: #333;
+  padding: 35px;
+}
+
+.conteiner-head1 .conteiner-logo{
+  position: absolute;
+  margin-left: 46%;
+  margin-top: -25px;
+}
+
+.conteiner-head1 .conteiner-sair{
+  position: absolute;
+  margin-left: 85%;
+  background-color: transparent;
+  border: 1px #ddd solid;
+  padding: 6px 10px;
+  margin-top: -10px;
+  border-radius: 5px;
+  color: #ddd;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.conteiner-sair:hover{
+  background-color: cornflowerblue;
+  border: cornflowerblue solid 1px;
+  box-shadow: 0 0 8px 1px cornflowerblue;
+}
+
+  #check{
+    display: none;
+  }
+
+  #icone{
+    cursor: pointer;
+    padding: 3px 5px 2px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    margin-top: -20px;
+    background-color: #ddd;
+    transition: .2s;
+  }
+
+  #icone:hover{
+    background-color: cornflowerblue;
+  }
+
+  .barra{
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    transition: all .2s linear;
+    left: -300px;
+    margin-top: -25px;
+  }
+
+  nav{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+  }
+
+  nav .conteiner-link{
+    text-decoration: none;
+  }
+
+  .a{
+    background-color: #333;
+    padding: 20px;
+    font-size: 14px;
+    transition: all .2s linear;
+    color: #ddd;
+    opacity: 0;
+    margin-top: 250px;
+    font-weight: bold;
+  }
+
+  .a:hover{
+    background-color: cornflowerblue;
+  }
+
+  #check:checked ~ .barra{
+    transform: translateX(300px);
+  }
+
+  #check:checked ~ .barra nav .conteiner-link .a{
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: .2s;
+  }
+
+
+  @media (max-width: 1000px) {
+    #app {
+      flex-direction: column;
+    }
+  
+    #app main {
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  
+    #app aside {
+      width: 100%;
+    }
+  }
