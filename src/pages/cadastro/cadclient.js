@@ -68,17 +68,17 @@ try{
                     <label id="avatar" style={{ backgroundImage: `url(${preview})` }}>
                         <input type="file" onChange={e => setThumbnail(e.target.files[0])} />
                     </label>
-                    <input value={name} onChange={e => setName(e.target.value)} placeholder="Seu nome" />
-                    <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Seu e-mail" />
+                    <input value={name} onChange={e => setName(e.target.value)} placeholder="Seu nome" required />
+                    <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Seu e-mail" required />
 
 
-                    <input value={phone} onChange={e => setPhone(e.target.value)} placeholder="Telefone" />
-                    <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="Sua senha" />
+                    <input value={phone} onChange={e => setPhone(e.target.value)} placeholder="Telefone" required />
+                    <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="Sua senha" required />
 
-                    <input value={cpfcnpj} onChange={e => setCpfcnpj(e.target.value)} placeholder="CPF" />
-                    <input value={locality} onChange={e => setLocality(e.target.value)} placeholder="UF" />
+                    <input value={cpfcnpj} onChange={e => setCpfcnpj(e.target.value)} placeholder="CPF" required />
+                    <input value={locality} onChange={e => setLocality(e.target.value)} placeholder="UF" required />
 
-                    <input value={address} onChange={e => setAddress(e.target.value)} placeholder="Seu endereço" />
+                    <input value={address} onChange={e => setAddress(e.target.value)} placeholder="Seu endereço" required />
 
                     <button type="submit">Cadastrar</button>
                 </form>

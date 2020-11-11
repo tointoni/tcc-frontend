@@ -22,11 +22,7 @@ function Allservice(props) {
             data.append('_id', UserClient);
         try {
             const token = localStorage.getItem('token')
-            const response = await api.get('/visuclient', data, { header: token })
-
-            
-
-            console.log(response)
+            await api.get('/visuclient', data, { header: token })
 
             setIncidents(incidents.filter(servico => servico.UserClient !== UserClient))
         } catch {

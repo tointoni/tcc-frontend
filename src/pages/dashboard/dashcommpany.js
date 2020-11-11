@@ -19,9 +19,8 @@ export default function Dashboard({ history }) {
 
     async function handleLogoff(e) {
         e.preventDefault();
-
-        const response = await api.delete('/logoff', { headers: { token } });
-        console.log(response);
+        
+        await api.delete('/logoff', { headers: { token } });
 
         localStorage.clear();
 
@@ -35,7 +34,6 @@ export default function Dashboard({ history }) {
             const response = await api.get("/list-service", { headers: { token } });
 
             setServicos(response.data);
-            console.log(response.data);
         }
 
         loadServicos();

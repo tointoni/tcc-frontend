@@ -30,12 +30,7 @@ export default function LoginCommpany() {
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('clientname', name);
 
-           //alert(`Seu token é:${response.data.token}`);
-
             alert(`${status}`);
-            console.log(response);
-            console.log(name);
-            console.log(response.data.token);
 
             if (response.data.token){
                 history.push('/dashcommpany')

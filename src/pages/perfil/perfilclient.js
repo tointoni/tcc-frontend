@@ -15,13 +15,12 @@ export default function Perfil() {
 
     const token = localStorage.getItem('token');
     useEffect(() => {
-        const response = api.get('perfilclient', {
+        api.get('perfilclient', {
             headers: {
                 token,
             }
         }).then(response => {
             setClients(response.data);
-            console.log(response)
         })
     }, [token]);
 

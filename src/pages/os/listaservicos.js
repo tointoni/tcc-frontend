@@ -23,8 +23,7 @@ export default function ListaServicos() {
         e.preventDefault();
 
         const token = localStorage.getItem('token');
-        const response = await api.delete('/logoff', { headers: { token } });
-        console.log(response);
+        await api.delete('/logoff', { headers: { token } });
 
         localStorage.clear();
 
@@ -36,7 +35,6 @@ export default function ListaServicos() {
         async function loadServicos() {
             const response = await api.get("/services", { headers: { token } });
 
-            console.log(response.data);
             setServicos(response.data);
         }
 
@@ -48,7 +46,7 @@ export default function ListaServicos() {
 
         setServicos([...servicos, response.data]);
         const status = response.data.status;
-        console.log(response)
+        
         alert(`${status}`)
       window.location.reload();
 

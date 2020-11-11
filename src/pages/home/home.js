@@ -58,10 +58,7 @@ function home() {
                     <h2>Diferenciais</h2>
 
                     <div className="conteiner-grid2">
-                        <div>
-                            <h3 className="h3">Chat</h3>
-                            <p className="p"><i>Você pode conversar com o profissional por chat.</i></p>
-                        </div>
+                        
                         <div>
                             <h3 className="h3">Suporte</h3>
                             <p className="p"><i>Você terá suporte após conclusão do serviço.</i></p>
@@ -77,27 +74,6 @@ function home() {
                         </div>
 
                     </div>
-                </div>
-
-                <div className="rank">
-                    <ul>
-                        <li>
-                            <h2>Ranking</h2>
-                        </li>
-                        <li>
-                            <img src={rankingImg} alt="Ranking" width="300" />
-                        </li>
-                        <li>
-                            <h4>Ranking dos profissionais</h4>
-                        </li>
-                        <ol type="1">
-                            <li>Antonio Edson</li>
-                            <li>Sabonete Holomeles</li>
-                            <li>Gilmar Seid</li>
-                            <li>Gilzão Ai Minino</li>
-                            <li>Kaycky lindo </li>
-                        </ol>
-                    </ul>
                 </div>
 
             </div>

@@ -7,9 +7,8 @@ export default function ResetPassword() {
     async function handleReset(e) {
         e.preventDefault();
 
-        const response = await api.post('/resert-passwordclient', { email });
+        await api.post('/resert-passwordclient', { email });
 
-        console.log(response.data);
     }
 
     return (

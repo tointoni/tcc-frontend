@@ -23,7 +23,6 @@ export default function EditClient() {
         async function loadDados() {
             const response = await api.get("perfilclient", { headers: { token } });
 
-            console.log(response);
             setDados(response.data);
         }
 
@@ -41,8 +40,6 @@ export default function EditClient() {
         const status = response.data.status;
 
         alert(`${status}`);
-        console.log(response);
-
     }
 
 

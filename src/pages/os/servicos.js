@@ -18,7 +18,7 @@ function Service(props) {
         setLongitude(longitude);
       },
       (err) => {
-        console.log(err);
+        alert('Não foi possível pegar a sua localização, tente novamente.')
       },
       {
         timeout: 30000
@@ -72,7 +72,6 @@ function Service(props) {
           type="number"
           name="amountPayable"
           id="amountPayable"
-          required
           value={amountPayable}
           onChange={e => setamountPayable(e.target.value)}
         />
