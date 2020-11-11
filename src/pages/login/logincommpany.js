@@ -44,6 +44,9 @@ export default function LoginCommpany() {
                     <img src={logoImg} alt="Técnicos 24H" width="60" />
                     <h4>Técnicos 24H</h4>
                 </div>
+                <div className="type-login">
+            <Link to="/sign-client" className="linkq">Logar como cliente</Link>
+                </div>
             </div>
 
             <div className="voltar">
@@ -53,8 +56,6 @@ export default function LoginCommpany() {
             
 
             <div className="formular">
-
-            <Link to="/sign-client" className="linkq">Logar como cliente</Link>
 
                 <form onSubmit={handleLogin}>
                     <label className="email" htmlFor="email">Email</label>

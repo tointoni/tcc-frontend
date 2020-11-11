@@ -44,17 +44,19 @@ export default function LoginClient() {
                     <img src={logoImg} alt="Técnicos 24H" width="60" />
                     <h4>Técnicos 24H</h4>
                 </div>
+                <div className="type-login">
+                <Link to="/sign-company" className="linkq">Logar como Empresa</Link> 
+                </div>
             </div>
 
             <div className="voltar">
                 <Link to="/"><img src={VoltarImg} width="15" alt="voltar" /></Link>
                 <Link to="/"><button>Voltar</button></Link>
             </div>
-            
+
+           
 
             <div className="formular">
-
-            <Link to="/sign-company" className="linkq">Logar como Empresa</Link>
 
                 <form onSubmit={handleLogin}>
                     <label className="email" htmlFor="email">Email</label>

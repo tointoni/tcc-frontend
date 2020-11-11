@@ -84,7 +84,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 
 .espc {
     margin-top: 5%;
-    margin-bottom: 30%;
+    margin-bottom: 40%;
 }
 
 .espc h2 {
@@ -135,6 +135,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
     max-width: 300px;
     margin-left: 10%;
     margin-bottom: 5%;
+}
+
+.dif {
+    margin-bottom: 300px;
 }
 
 .rank {
