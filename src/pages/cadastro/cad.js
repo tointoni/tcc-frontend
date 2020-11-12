@@ -19,7 +19,7 @@ export default function Cad() {
                     <Link to="/company-signup"><button className="buttonb">Seja profissional</button></Link>
                 </div>
                 <div className="voltar">
-                <Link to="/"><img src={VoltarImg} width="15" alt="voltar" /></Link>
+                <Link to="/"><img src={VoltarImg} width="20" alt="voltar" /></Link>
                 <Link to="/"><button>Voltar</button></Link>
             </div>
             </div>

@@ -19,7 +19,7 @@
     float: right;
     margin-left: 8px;
     margin-top: 16px;
-    color: #fff;
+    color: #eee;
 }
 
 .formu {
@@ -32,7 +32,7 @@
     background-color: rgba(51, 51, 51, 0.425);
     border-radius: 5px;
     margin-right: 10%;
-    color: #fff;
+    color: #eee;
     text-decoration: none;
     border: 1px rgba(255, 255, 255, 0.575) solid;
     cursor: pointer;
@@ -40,9 +40,9 @@
 }
 
 .formu button:hover{
-    background-color: cornflowerblue;
-    box-shadow: 0px 0px 10px cornflowerblue;
-    border: cornflowerblue solid 1px;
+    background-color: #2677C3;
+    box-shadow: 0px 0px 10px #2677C3;
+    border: #2677C3 solid 1px;
 }
 
 .tras {
@@ -52,7 +52,7 @@ background: -webkit-linear-gradient(top,  rgba(48,48,48,0.65) 0%,rgba(0,0,0,0) 1
 background: linear-gradient(to bottom,  rgba(48,48,48,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
            
-    padding: 100px;
+    padding: 140px;
 }
 
 .tras h1 {
@@ -70,21 +70,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
     border-radius: 7px;
     text-decoration: none;
     border: 1px solid #333;
-    color: #000;
+    color: #111;
     cursor: pointer;
     transition: linear all .2s;
 }
 
 .tras button:hover{
-    background-color: cornflowerblue;
-    box-shadow: 0px 0px 8px 1px cornflowerblue;
-    border: cornflowerblue solid 1px;
-    color: #ddd;
+    background-color: #2677C3;
+    box-shadow: 0px 0px 8px 1px #2677C3;
+    border: #2677C3 solid 1px;
+    color: #eee;
 }
 
 .espc {
-    margin-top: 5%;
-    margin-bottom: 40%;
+    margin-top: 10%;
+    margin-bottom: 20%;
 }
 
 .espc h2 {
@@ -92,30 +92,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
     margin-bottom: 10%;
 }
 
-.diva {
-    float: left;
-    margin-left: 20%;
+.content-servico{
+    display: flex;
+    flex-direction: column 1fr 1fr;
+    margin-left: 25%;
+    column-gap: 20%;
+}
+
+.content-servico div{
     max-width: 350px;
 }
 
-.divb {
-    float: right;
-    margin-right: 20%;
+.dif{
+    margin-bottom: 25%;
 }
-
-.teste{
-    animation: teste 9s linear infinite;
-  }
-
-  @keyframes teste {
-    from {
-      transform: translateX(-150px);
-    }
-
-    to {
-      transform: translateX(1400px);
-    }
-  }
 
 .dif h2 {
     margin-top: 5%;
@@ -126,47 +116,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 .conteiner-grid2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 50%;
-    margin-left: 10%;
+    margin-left: 8%;
 }
 
-.dif ul li {
-    display: inline-block;
+.conteiner-grid2 div{
     max-width: 300px;
-    margin-left: 10%;
-    margin-bottom: 5%;
 }
 
-.dif {
-    margin-bottom: 300px;
+.conteiner-grid2 div h3{
+    margin-bottom: 5px;
 }
 
-.rank {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-top: 20%;
-    margin-bottom: 20%;
-    background: #f3f4f6;
-    border-radius: 25px;
-    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.5),
-                 15px 15px 15px rgba(0, 0, 0, 0.05);
-    width: 400px;
-    height: 500px;
-    margin-left: 38%;
-    
-}
-
-.rank ul {
-    list-style: none;
-}
-
-.rank ul li {
-    margin-bottom: 3%;
-}
-.rank ul li img {
-    display: flex;
+.conteiner-grid2 div a{
+    text-decoration: none;
+    color: #2677C3;
 }
 
 .footer {
@@ -181,7 +144,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 }
 
 .div1 h5{
-    color: #ccc;
+    color: #eee;
     font-size: 16px;
     margin-bottom: 5px;
     margin-top: 20px;
@@ -189,14 +152,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 
 .div1 a{
     margin-top: 5px;
-    color: cornflowerblue;
+    color: #2677C3;
     font-size: 14px;
     text-decoration: none;
 }
 
 .div1 a:hover{
-    color: rgb(70, 119, 207);
-    text-shadow: 0 0 4px 2px rgb(70, 119, 207);
+    color: #1D5D99;
+    text-shadow: 0 0 4px 2px #1D5D99;
 }
 
 .div1 ul{
@@ -205,7 +168,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 }
 
 .div1 ul li{
-    color: cornflowerblue;
+    color: #2677C3;
 }
 
 .div2{
@@ -214,7 +177,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 }
 
 .div2 h5{
-    color: #ccc;
+    color: #eee;
     font-size: 16px;
     margin-bottom: 5px;
     margin-top: 20px;
@@ -222,14 +185,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 
 .div2 a{
     margin-top: 5px;
-    color: cornflowerblue;
+    color: #2677C3;
     font-size: 14px;
     text-decoration: none;
 }
 
 .div2 a:hover{
-    color: rgb(70, 119, 207);
-    text-shadow: 0 0 4px 2px rgb(70, 119, 207);
+    color: #1D5D99;
+    text-shadow: 0 0 4px 2px #1D5D99;
 }
 
 .div2 ul{
@@ -238,8 +201,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 }
 
 .div2 ul li{
-    color: cornflowerblue;
-    margin-bottom: 10px;
+    color: #2677C3;
+    margin-bottom: 5px;
 }
 
 .div3{
@@ -247,7 +210,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 }
 
 .div3 h5{
-    color: #ccc;
+    color: #eee;
     margin-top: 20px;
     font-size: 16px;
     margin-bottom: 5px;
@@ -255,7 +218,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 
 .div3 p{
     margin-bottom: 5px;
-    color: cornflowerblue;
+    color: #2677C3;
     font-size: 14px;
     font-weight: bold;
 }

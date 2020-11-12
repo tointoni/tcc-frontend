@@ -32,40 +32,47 @@ body{
     margin-left: 70%;
     text-decoration: none;
     font-size: 14px;
-    color: #fff;
+    color: #eee;
     margin-bottom: 10px;
     cursor: pointer;
     transition: all .2s linear;
 }
 
 .linkq:hover{
-    background-color: cornflowerblue;
-    box-shadow: 0px 0px 10px cornflowerblue;
-    border: cornflowerblue solid 1px;
+    background-color: #2677C3;
+    box-shadow: 0px 0px 10px #2677C3;
+    border: #2677C3 solid 1px;
 }
 
 .conte h4 {
     float: right;
     margin-left: 8px;
     margin-top: 16px;
-    color: #fff;
+    color: #eee;
+}
+
+.voltar{
+    display: flex;
+    flex-direction: column 1fr 1fr;
+    margin-top: 30px;
 }
 
 .voltar img{
-    margin-bottom: -2px;
+    margin-left: 50px;
+    cursor: pointer;
 }
 
 .voltar button{
-    margin-top: 10px;
-    background-color: transparent;
+    margin-top: -10px;
+    background-color: none;
     border: none;
-    padding: 8px;
+    font-size: 14px;
     cursor: pointer;
 }
 
 .formular {
     background-color: transparent;
-    margin-top: 10%;
+    margin-top: 70px;
     margin-left: 38%;
     max-width: 300px;
     width: 100%;
@@ -75,7 +82,7 @@ body{
     box-shadow: 0px 0px 50px rgba(200, 200, 200);
 }
 
-.formular form{
+.formular .content-form{
     margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -83,22 +90,26 @@ body{
     column-gap: 10px;
 }
 
-.formular button{
-    margin-top: 15px;
+.formular .content-form input{
+    margin-left: 5px;
+}
+
+.formular button[type=submit]{
+    margin-top: 25px;
     padding: 10px 15px;
-    margin-left: 50px;
+    margin-left: 70px;
     border-radius: 5px;
     border: none;
-    background-color: cornflowerblue;
-    color: #333;
+    background-color: #2677C3;
+    color: #eee;
     font-weight: bolder;
     cursor: pointer;
     transition: linear all .3s;
 }
 
 .formular button:hover{
-    background-color: cornflowerblue;
-    box-shadow: 0px 0px 10px cornflowerblue;
+    background-color: #1D5D99;
+    box-shadow: 0px 0px 10px #1D5D99;
 }
 
 .formular input {
@@ -115,25 +126,25 @@ body{
 }
 
 .formular input:hover{
-    border-bottom: cornflowerblue 2px solid;
+    border-bottom: #2677C3 2px solid;
 }
 
-
+.formular .content-links{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 5px;
+    margin-top: 25px;
+    margin-left: 30px;
+}
 
 .linkw{
     text-decoration: none;
-    position: absolute;
-    margin-top: 70px;
-    margin-left: 5px;
     font-size: 14px;
-    color: cornflowerblue;
+    color: #2677C3;
 }
 
 .conteiner-reset{
     text-decoration: none;
-    position: absolute;
-    margin-top: 140px;
-    color: cornflowerblue;
-    font-size: 12px;
-    margin-left: 5px;
+    color: #2677C3;
+    font-size: 14px;
 }

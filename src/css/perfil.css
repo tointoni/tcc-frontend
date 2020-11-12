@@ -5,11 +5,25 @@
 
 .conteiner-bar h3{
     margin-left: 48%;
-    color: #ddd;
+    color: #eee;
+    font-size: 24px;
 }
 
 .voltar{
-    margin-left: 20px;
+    display: flex;
+    flex-direction: column 1fr 1fr;
+    margin-top: 30px;
+}
+
+.voltar img{
+    margin-left: 50px;
+}
+
+.voltar button{
+    margin-top: -10px;
+    font-size: 14px;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .conteiner-company{
@@ -27,7 +41,7 @@
 }
 
 .conteiner-perfil hr{
-    border: cornflowerblue 2px solid;
+    border: #2677C3 2px solid;
     max-width: 250px;
     border-top: none;
     border-left: none;
@@ -44,12 +58,12 @@
 }
 
 .buttonn{
-    background-color: cornflowerblue;
+    background-color: #2677C3;
     padding: 8px 20px;
     border-radius: 2px;
     margin-left: 45%;
     margin-top: 20px;
-    color: #333;
+    color: #eee;
     border: 0;
     font-size: 16px;
     font-weight: bold;
@@ -58,6 +72,5 @@
 }
 
 .buttonn:hover{
-    background-color: rgb(60, 109, 197);
-    color: #ddd;
+    background-color: #1D5D99;
 }

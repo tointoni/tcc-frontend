@@ -1,49 +1,68 @@
 .conteiner-head{
     background-color: #333;
-    padding: 18px;
+    padding: 25px;
 }
 
-.conteiner-head h1{
+.conteiner-head h3{
     margin-left: 40%;
-    color: #ddd;
+    color: #eee;
+    font-size: 24px;
+}
+
+.voltar{
+    display: flex;
+    flex-direction: column 1fr 1fr;
+    margin-top: 30px;
+}
+
+.voltar img{
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.voltar button{
+    margin-top: -10px;
+    font-size: 14px;
+    background-color: none;
+    cursor: pointer;
 }
 
 .conteiner-form{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 28px;
+    row-gap: 25px;
     margin-left: 20%;
     margin-top: 6%;
 }
 
 .input{
+    display: block;
     background-color: transparent;
     border: 1px solid #aaaaaa;
-    margin-left: 5px;
+    margin-top: 3px;
     padding: 5px;
     border-radius: 3px;
-    transition: all .2s;
+    transition: all .2s linear;
 }
 
 .input:hover{
-    border: solid 1px cornflowerblue;
+    border: solid 1px  #2677C3;
 }
 
 .buttonw{
-    background-color: cornflowerblue;
+    background-color:  #2677C3;
     border: 0;
     border-radius: 3px;
-    padding: 5px 10px;
-    margin-left: 50%;
-    margin-top: 20px;
+    padding: 5px 15px;
+    margin-left: 46%;
+    margin-top: 80px;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #eee;
     cursor: pointer;
     transition: all .2s linear;
 }
 
 .buttonw:hover{
-    background-color: rgb(60, 109, 197);
-    color: #ddd;
+    background-color:  #1D5D99;
 }

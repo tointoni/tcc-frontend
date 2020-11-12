@@ -38,7 +38,7 @@ export default function EditCompany() {
                 <h1>Alterar seus dados</h1>
             </header>
             <div className="voltar">
-                <Link to="/perfilcompany"><img src={VoltarImg} width="15" alt="voltar" /></Link>
+                <Link to="/perfilcompany"><img src={VoltarImg} width="20" alt="voltar" /></Link>
                 <Link to="/perfilcompany"><button>Voltar</button></Link>
             </div>
             <form className="conteiner-form" onSubmit={handleAltera}>

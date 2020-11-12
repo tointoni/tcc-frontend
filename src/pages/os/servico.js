@@ -59,7 +59,7 @@ function Servico(props) {
           <strong>{servico.title}</strong>
           <span>{servico.description}</span>
           <p className="userphone">{servico.userPhone}</p>
-          <Link to="" className="userName"><p className="user-name">{servico.userName}</p></Link>
+          <p className="user-name">{servico.userName}</p>
           <strong className="user-payable">{servico.amountPayable ? `R$${servico.amountPayable}` : ''}</strong>
           <p>{servico.Data_services ? `${servico.Data_services.split("T", 1)}` : ''}</p>
         </div>

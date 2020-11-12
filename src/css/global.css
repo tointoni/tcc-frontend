@@ -29,10 +29,11 @@ body, input, button {
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: cornflowerblue;
+  background: #2677C3;
+  transition: all linear .3s;
 }
 ::-webkit-scrollbar-thumb:hover{
-  background: rgb(60, 109, 197);
+  background: #1D5D99;
 }
 ::-webkit-scrollbar-corner{
   display: none;

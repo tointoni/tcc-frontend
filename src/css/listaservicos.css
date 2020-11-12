@@ -28,19 +28,19 @@
   position: absolute;
   margin-left: 85%;
   background-color: transparent;
-  border: 1px #ddd solid;
+  border: 1px #eee solid;
   padding: 6px 10px;
   margin-top: -10px;
   border-radius: 5px;
-  color: #ddd;
+  color: #eee;
   cursor: pointer;
   transition: all .3s;
 }
 
 .conteiner-sair:hover{
-  background-color: cornflowerblue;
-  border: cornflowerblue solid 1px;
-  box-shadow: 0 0 8px 1px cornflowerblue;
+  background-color: #2677C3;
+  border: #2677C3 solid 1px;
+  box-shadow: 0 0 8px 1px #2677C3;
 }
 
   #check{
@@ -54,12 +54,12 @@
     position: absolute;
     z-index: 1;
     margin-top: -20px;
-    background-color: #ddd;
+    background-color: #eee;
     transition: .2s;
   }
 
   #icone:hover{
-    background-color: cornflowerblue;
+    background-color: #2677C3;
   }
 
   .barra{
@@ -86,14 +86,14 @@
     padding: 20px;
     font-size: 14px;
     transition: all .2s linear;
-    color: #ddd;
+    color: #eee;
     opacity: 0;
     margin-top: 250px;
     font-weight: bold;
   }
 
   .a:hover{
-    background-color: cornflowerblue;
+    background-color: #2677C3;
   }
 
   #check:checked ~ .barra{

@@ -1,3 +1,7 @@
+.conteiner-cad{
+    overflow: hidden;
+}
+
 .conteiner-cad .voltar {
     position: absolute;
 }
@@ -23,7 +27,7 @@
     border: 0;
     font-size: 28px;
     font-weight: bold;
-    padding: 319px 200px;
+    padding: 317px 200px;
     height: 100%;
     cursor: pointer;
     transition: all .3s;
@@ -46,9 +50,22 @@
 }
 
 .conteiner-grid1 .grid1:hover {
-    background-color: cornflowerblue;
+    background-color: #2677C3;
 }
 
 .conteiner-grid1 .grid2:hover {
-    background-color: cornflowerblue;
+    background-color: #2677C3;
 }
+
+::-webkit-scrollbar-track {
+    display: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+}
+  ::-webkit-scrollbar-thumb {
+    display: none;
+}
+  ::-webkit-scrollbar-corner{
+    display: none;
+  }

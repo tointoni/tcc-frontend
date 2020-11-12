@@ -46,15 +46,15 @@ export default function EditClient() {
     return (
         <div>
             <header className="conteiner-head">
-                <h1>Alterar seus dados</h1>
+                <h3>Alterar seus dados</h3>
             </header>
             <div className="voltar">
-                <Link to="/perfilclient"><img src={VoltarImg} width="15" alt="voltar" /></Link>
+                <Link to="/perfilclient"><img src={VoltarImg} width="20" alt="voltar" /></Link>
                 <Link to="/perfilclient"><button>Voltar</button></Link>
             </div>
 
-            <form className="conteiner-form" onSubmit={handleAltera}>
-
+            <form onSubmit={handleAltera}>
+                <div className="conteiner-form">
                 <label id="avatar" style={{ backgroundImage: `url(${preview})` }}>
                     <input type="file" onChange={e => setThumbnail(e.target.files[0])} />
                 </label>
@@ -63,7 +63,8 @@ export default function EditClient() {
                 <label><strong>Telefone:</strong><input className="input" value={phone} onChange={e => setPhone(e.target.value)} placeholder={dados.phone} /></label>
                 <label><strong>UF:</strong><input className="input" value={locality} onChange={e => setLocality(e.target.value)} placeholder={dados.locality} /></label>
                 <label><strong>Endereço:</strong><input className="input" value={address} onChange={e => setAddress(e.target.value)} placeholder={dados.address} /></label>
-
+                </div>
+                
                 <button className="buttonw" type="submit">Alterar</button>
             </form>
 

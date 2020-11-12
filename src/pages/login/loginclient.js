@@ -50,7 +50,7 @@ export default function LoginClient() {
             </div>
 
             <div className="voltar">
-                <Link to="/"><img src={VoltarImg} width="15" alt="voltar" /></Link>
+                <Link to="/"><img src={VoltarImg} width="20" alt="voltar" /></Link>
                 <Link to="/"><button>Voltar</button></Link>
             </div>
 
@@ -59,6 +59,7 @@ export default function LoginClient() {
             <div className="formular">
 
                 <form onSubmit={handleLogin}>
+                    <div className="content-form">
                     <label className="email" htmlFor="email">Email</label>
                     <input 
                         name="email"
@@ -78,10 +79,12 @@ export default function LoginClient() {
                         type="password" 
                         required 
                         />
-                        <Link to="/cadastro" className="linkw">Não tem uma conta?</Link>
+                        </div>
                     <button type="submit">Logar</button>
-                    <Link to="/reset-password" className="conteiner-reset">Esqueci minha senha</Link>
-
+                    <div className="content-links">
+                        <Link to="/cadastro" className="linkw">Não tem uma conta?</Link>
+                        <Link to="/reset-password" className="conteiner-reset">Esqueci minha senha</Link>
+                    </div>
                 </form>
             </div>
         </div>

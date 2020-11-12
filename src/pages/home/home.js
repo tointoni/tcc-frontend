@@ -38,17 +38,18 @@ function home() {
                 <div className="espc">
                     <h2>Precisa de Serviços?</h2>
 
-
-                    <div className="diva">
+                <div className="content-servico">
+                    <div>
                         <img src={serviçosIgm} alt="serviços" width="200" />
                         <h3>Solicite um serviço</h3>
                         <p><i>É facil. Basta solicitar um serviço que você precisa e receber reposta de um profissional.</i></p>
                     </div>
 
-                    <div className="divb">
-                        <img src={negociarImg} alt="Negociar" width="200" />
+                    <div>
+                        <img src={negociarImg} alt="Negociar" width="112" />
                         <h3>Negocie com o profissional</h3>
                         <p><i>Negocie direto com o profissional.</i></p>
+                    </div>
                     </div>
                 </div>
 

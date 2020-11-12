@@ -47,7 +47,7 @@ try{
     }
 
     return (
-        <div className="container">
+        <div className="container-cad">
 
             <div className="cabe">
                 <div className="conte">
@@ -57,7 +57,7 @@ try{
             </div>
 
             <div className="voltar">
-                <Link to="/cadastro"><img src={VoltarImg} width="15" alt="voltar" /></Link>
+                <Link to="/cadastro"><img src={VoltarImg} width="20" alt="voltar" /></Link>
                 <Link to="/cadastro"><button>Voltar</button></Link>
             </div>
 

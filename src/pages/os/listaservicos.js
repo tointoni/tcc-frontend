@@ -76,9 +76,9 @@ export default function ListaServicos() {
                 </aside>
                 <main>
                     <ul>
-                        {servicos.map(servico => (
-                            <AddServ key={servico._id} servico={servico} />
-                        ))}
+                    {servicos.map(servico => (
+                        <AddServ key={servico._id} servico={servico} />
+                     ))}
                     </ul>
                 </main>
             </div >
