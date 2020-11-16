@@ -56,7 +56,7 @@ try{
                 </div>
             </div>
 
-            <div className="voltar">
+            <div className="voltar-cad">
                 <Link to="/cadastro"><img src={VoltarImg} width="20" alt="voltar" /></Link>
                 <Link to="/cadastro"><button>Voltar</button></Link>
             </div>

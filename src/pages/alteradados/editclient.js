@@ -48,7 +48,7 @@ export default function EditClient() {
             <header className="conteiner-head">
                 <h3>Alterar seus dados</h3>
             </header>
-            <div className="voltar">
+            <div className="voltar-edit">
                 <Link to="/perfilclient"><img src={VoltarImg} width="20" alt="voltar" /></Link>
                 <Link to="/perfilclient"><button>Voltar</button></Link>
             </div>

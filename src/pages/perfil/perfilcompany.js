@@ -27,7 +27,7 @@ export default function Perfil() {
             <div className="conteiner-bar">
                 <h3>Perfil</h3>
             </div>
-            <div className="voltar">
+            <div className="voltar-pefil">
                 <Link to="/dashcommpany"><img src={VoltarImg} width="20" alt="voltar" /></Link>
                 <Link to="/dashcommpany"><button>Voltar</button></Link>
             </div>

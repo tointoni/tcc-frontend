@@ -62,7 +62,7 @@ try{
                 </div>
             </div>
 
-            <div className="voltar">
+            <div className="voltar-cad">
                 <Link to="/cadastro"><img src={VoltarImg} width="20" alt="voltar" /></Link>
                 <Link to="/cadastro"><button>Voltar</button></Link>
             </div>
@@ -77,18 +77,15 @@ try{
                     <input value={name} onChange={e => setName(e.target.value)} placeholder="Seu nome" required />
                     <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Seu e-mail" required />
 
-
-                    <input value={phone} onChange={e => setPhone(e.target.value)} placeholder="Telefone" required />
+                    <input value={phone} onChange={e => setPhone(e.target.value)} type="tel" placeholder="Telefone" required />
                     <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="Sua senha"required />
 
                     <input value={cpfcnpj} onChange={e => setCpfcnpj(e.target.value)} placeholder="CNPJ" required />
                     <input value={locality} onChange={e => setLocality(e.target.value)} placeholder="UF" required />
 
                     <input value={address} onChange={e => setAddress(e.target.value)} placeholder="Seu endereço" required />
-                    <input value={evaluation} onChange={e => setEvaluation(e.target.value)} placeholder="Seu endereço" required />
                     <input value={description} onChange={e => setDescription(e.target.value)} placeholder="Descrição" required />
                     <input value={specialization} onChange={e => setSpecialization(e.target.value)} placeholder="Sua Especialização" required />
-
 
                     <button type="submit">Cadastrar</button>
                 </form>

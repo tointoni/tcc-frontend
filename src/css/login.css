@@ -51,22 +51,23 @@ body{
     color: #eee;
 }
 
-.voltar{
+.voltar-login{
     display: flex;
     flex-direction: column 1fr 1fr;
     margin-top: 30px;
 }
 
-.voltar img{
+.voltar-login img{
     margin-left: 50px;
     cursor: pointer;
 }
 
-.voltar button{
+.voltar-login button{
     margin-top: -10px;
-    background-color: none;
-    border: none;
-    font-size: 14px;
+    margin-left: 4px;
+    background-color: transparent;
+    border: transparent;
+    font-size: 15px;
     cursor: pointer;
 }
 

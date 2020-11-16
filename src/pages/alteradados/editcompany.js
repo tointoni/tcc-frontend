@@ -37,7 +37,7 @@ export default function EditCompany() {
             <header className="conteiner-head">
                 <h1>Alterar seus dados</h1>
             </header>
-            <div className="voltar">
+            <div className="voltar-edit">
                 <Link to="/perfilcompany"><img src={VoltarImg} width="20" alt="voltar" /></Link>
                 <Link to="/perfilcompany"><button>Voltar</button></Link>
             </div>
@@ -55,7 +55,6 @@ export default function EditCompany() {
                 <label><strong>Localidade:</strong><input className="input" value={locality} onChange={e => setLocality(e.target.value)} placeholder="UF" /></label>
 
                 <label><strong>Endereço:</strong><input className="input" value={address} onChange={e => setAddress(e.target.value)} placeholder="Seu endereço" /></label>
-                <label><strong>Evolução:</strong><input className="input" value={evaluation} onChange={e => setEvaluation(e.target.value)} placeholder="Seu endereço" /></label>
                 <label><strong>Descrição:</strong><input className="input" value={description} onChange={e => setDescription(e.target.value)} placeholder="Descrição" /></label>
                 <label><strong>Especialização:</strong><input className="input" value={specialization} onChange={e => setSpecialization(e.target.value)} placeholder="Sua Especialização" /></label>
 

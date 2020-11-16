@@ -49,7 +49,7 @@ export default function LoginClient() {
                 </div>
             </div>
 
-            <div className="voltar">
+            <div className="voltar-login">
                 <Link to="/"><img src={VoltarImg} width="20" alt="voltar" /></Link>
                 <Link to="/"><button>Voltar</button></Link>
             </div>

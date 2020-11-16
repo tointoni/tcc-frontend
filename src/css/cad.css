@@ -28,21 +28,23 @@ body {
     color: #eee;
 }
 
-.voltar{
+.voltar-cad{
     display: flex;
     flex-direction: column 1fr 1fr;
     margin-top: 30px;
 }
 
-.voltar img{
+.voltar-cad img{
     margin-left: 50px;
     cursor: pointer;
 }
 
-.voltar button{
+.voltar-cad button{
     margin-top: -10px;
-    font-size: 14px;
-    background-color: none;
+    font-size: 15px;
+    margin-left: 4px;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
 }
 
