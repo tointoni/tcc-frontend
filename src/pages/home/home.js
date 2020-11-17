@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import logoImg from '../../img/logo.png';
 import serviçosIgm from '../../img/servicos.png';
 import negociarImg from '../../img/negociar.jpeg';
-import rankingImg from '../../img/ranking.jpg';
 
 function home() {
     document.title = 'Técnicos 24H'
@@ -31,8 +30,10 @@ function home() {
             <div className="corpo">
                 <div className="tras">
                     <h1>Contrate Serviços De Segurança Eletrônica On-line!</h1>
-                    <Link to="/client-signup"><button>Quero Contratar</button></Link>
-                    <Link to="/company-signup"><button>Quero Trabalhar</button></Link>
+                    <div className="button-tras">
+                    <Link to="/client-signup" className="button-tras-a">Quero Contratar</Link>
+                    <Link to="/company-signup" className="button-tras-a">Quero Trabalhar</Link>
+                    </div>
                 </div>
 
                 <div className="espc">

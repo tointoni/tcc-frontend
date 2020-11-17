@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { useState } from "react";
 import api from '../../services/api';
 
@@ -39,9 +40,24 @@ function Servico(props) {
     }
   }
 
-  async function handleEditIncident(_id) {
+  async function handleStts(_id) {
 
-    setIncidents(incidents.filter(servico => servico._id !== _id));
+    try {
+      const response = await api.post(`/sttsclose/${_id}`, {
+        headers: {
+          token,
+        }
+      });
+
+      const status = response.data.status;
+      alert(`${status}`)
+      window.location.reload();
+
+
+      setIncidents(incidents.filter(servico => servico._id !== _id));
+    } catch {
+    alert("Houve um problema, tente novamente")
+    }
 
   }
 
@@ -61,23 +77,26 @@ function Servico(props) {
           <p className="userphone">{servico.userPhone}</p>
           <p className="user-name">{servico.userName}</p>
           <strong className="user-payable">{servico.amountPayable ? `R$${servico.amountPayable}` : ''}</strong>
+          
           <div className="container-info">
           <p>{servico.Data_services ? `${servico.Data_services.split("T", 1)}` : ''}</p>
-          <a href={`https://www.google.com.br/maps/@${servico.location.coordinates}`} target="_blank">abrir o mapa</a>
           </div>
         </div>
+
         <div className="conteiner-grid">
           <img className="delete" src={Delete} title="Deletar" onClick={() => handleDeleteIncident(servico._id)} />
-          <Link to="/updateservice" className="edit"><img className="img-edit" src={Edit} title="Editar" onClick={() => handleEditIncident(servico._id)} /></Link>
+          <Link to="/updateservice" className="edit"><img className="img-edit" src={Edit} title="Editar" /></Link>
         </div>
       </header>
+
       <div className="conteiner-map">
-        <Map className="map" center={[-3.077183, -60.05899]} zoom={15}>
+        <Map className="map" center={servico.data.location.coordinates} zoom={15}>
           <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`} />
-          <Marker icon={mapIcon} position={[-3.077183, -60.05899]} />
+          <Marker icon={mapIcon} position={servico.location.coordinates} />
         </Map>
+
         <section className="grid-orden">
-        <p className="status">{servico.status}</p>
+        <button className="status" onClick={() => handleStts(servico._id)}>{servico.status}</button>
         <p className="orden">ID: {servico.order}</p>
         </section>
       </div>
