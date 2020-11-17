@@ -18,7 +18,7 @@ export default function Cad() {
                 <div className="grid2">
                     <Link to="/company-signup"><button className="buttonb">Seja profissional</button></Link>
                 </div>
-                <div className="voltar">
+                <div className="voltar-precad">
                 <Link to="/"><img src={VoltarImg} width="20" alt="voltar" /></Link>
                 <Link to="/"><button>Voltar</button></Link>
             </div>

@@ -2,8 +2,25 @@
     overflow: hidden;
 }
 
-.conteiner-cad .voltar {
+.conteiner-cad .voltar-precad {
     position: absolute;
+    display: flex;
+    flex-direction: column 1fr 1fr;
+    margin-top: 30px;
+}
+
+.conteiner-cad .voltar-precad img {
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.conteiner-cad .voltar-precad button{
+    margin-left: 4px;
+    margin-top: -20px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
 }
 
 .conteiner-grid1 {
