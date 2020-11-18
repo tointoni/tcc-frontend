@@ -282,7 +282,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 
 @media(max-width: 750px){
     .espc{
-        margin-right: 25%;
+        margin-right: 35%;
     }
 
     .dif{
@@ -291,12 +291,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 }
 
 @media(max-width: 600px){
+    .espc{
+        margin-left: -6%;
+    }
+
     .footer{
         grid-template-columns: 1fr;
     }
 
     .footer div{
-        margin-left: 40%;
+        margin-left: 30%;
     }
 
     .footer .div3{

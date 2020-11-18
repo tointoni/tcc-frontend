@@ -41,11 +41,16 @@
     border: 1px dashed #999;
     background-size: cover;
     cursor: pointer;
+    margin-left: 27%;
+    margin-bottom: 15%;
+    width: 200px;
     height: 200px;
+    border-radius: 50%;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .formula form .formula-avatar label#thumbnail input {
@@ -61,14 +66,14 @@
 }
 
 .formula form{
-    background-color: transparent;
+    background-color: #FFF;
     margin-top: 4%;
     margin-left: 30%;
     margin-right: 30%;
     margin-bottom: 10%;
     padding: 30px;
     border-radius: 4px;
-    box-shadow: 0px 0px 50px rgba(200, 200, 200);             
+    box-shadow: 0px 0px 15px rgba(200, 200, 200);             
 }
 
 .formula form .formula-form{
@@ -102,31 +107,56 @@
     box-shadow: 0px 0px 10px #1D5D99;
 }
 
-@media(max-width: 900px){
+@media(max-width: 1150px){
+    .formula form .formula-avatar label#thumbnail{
+        margin-left: 25%;
+    }
+}
+
+@media(max-width: 1000px){
+
+    .formula form .formula-avatar label#thumbnail{
+        margin-left: 30%;
+    }
     .container-cad .formula form{
-        margin-left: 18%;
+        margin-left: 20%;
+        margin-right: 20%;
     }
 }
 
 @media(max-width: 800px){
+    
+    .formula form .formula-avatar label#thumbnail{
+        margin-left: 25%;
+    }
     .container-cad .cabe .conte{
         margin-top: -25px;
     }
 }
 
 @media(max-width: 700px){
+    .formula form .formula-avatar label#thumbnail{
+        margin-left: 30%;
+    }
     .container-cad .formula form{
         margin-bottom: 10%;
+        margin-right: 10%;
+        margin-left: 10%;
     }
 
     .container-cad .formula form button{
-        margin-left: 30%;
+        margin-left: 25%;
     }
 
     .container-cad .formula form .formula-form{
         display: grid;
         grid-template-columns: 1fr;
-        max-width: 250px;
     }
 
+}
+
+@media(max-width: 600px){
+    .formula form .formula-avatar label#thumbnail{
+        margin-left: 23%;
+    }
 }

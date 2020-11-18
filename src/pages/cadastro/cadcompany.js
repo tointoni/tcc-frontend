@@ -1,4 +1,9 @@
 import React, { useState, useMemo } from 'react';
+
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import camera from '../../img/camera.svg';
+
 import api from '../../services/api';
 import '../../css/cad.css';
 
@@ -10,6 +15,16 @@ import { Link } from 'react-router-dom';
 function Cadastro({history}) {
     document.title = 'Cadastro'
 
+    const theme = createMuiTheme({
+        palette: {
+          primary: {
+            light: '#2e89d5',
+            main: '#2677C3',
+            dark: '#1f66b1',
+            contrastText: '#fff',
+          },
+        },
+    });
 
     const [thumbnail, setThumbnail] = useState(null);
     const [name, setName] = useState('');
@@ -70,23 +85,31 @@ try{
             <div className="formula">
 
                 <form onSubmit={handleCadastro}>
-
-                    <label id="avatar" style={{ backgroundImage: `url(${preview})` }}>
-                        <input type="file" onChange={e => setThumbnail(e.target.files[0])} />
+                <div className="formula-avatar">
+                <label id="thumbnail" 
+                    style={{ backgroundImage: `url(${preview})` }}
+                    className={thumbnail ? 'has-thumbnail' : ''}
+                    >
+                        <input type="file" onChange={e => setThumbnail(e.target.files[0])} accept="image/png, image/jpeg" />
+                        <img src={camera} alt="Selecione a imagem" />
                     </label>
-                    <input value={name} onChange={e => setName(e.target.value)} placeholder="Seu nome" required />
-                    <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Seu e-mail" required />
+                    </div>
+                    <div className="formula-form">
+                    <MuiThemeProvider theme={theme}>
+                    <TextField value={name} onChange={e => setName(e.target.value)} label="Seu nome" required />
+                    <TextField value={email} onChange={e => setEmail(e.target.value)} type="email" pattern="exemplo@exemplo.com" label="Seu e-mail" required />
 
-                    <input value={phone} onChange={e => setPhone(e.target.value)} type="tel" placeholder="Telefone" required />
-                    <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="Sua senha"required />
+                    <TextField value={phone} onChange={e => setPhone(e.target.value)} type="tel" label="Telefone" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" maxLength="11" title="(99)99999-9999" required />
+                    <TextField value={password} onChange={e => setPassword(e.target.value)} type="password" label="Sua senha"required />
 
-                    <input value={cpfcnpj} onChange={e => setCpfcnpj(e.target.value)} placeholder="CNPJ" required />
-                    <input value={locality} onChange={e => setLocality(e.target.value)} placeholder="UF" required />
+                    <TextField value={cpfcnpj} onChange={e => setCpfcnpj(e.target.value)} label="CNPJ" required />
+                    <TextField value={locality} onChange={e => setLocality(e.target.value)} label="UF" required />
 
-                    <input value={address} onChange={e => setAddress(e.target.value)} placeholder="Seu endereço" required />
-                    <input value={description} onChange={e => setDescription(e.target.value)} placeholder="Descrição" required />
-                    <input value={specialization} onChange={e => setSpecialization(e.target.value)} placeholder="Sua Especialização" required />
-
+                    <TextField value={address} onChange={e => setAddress(e.target.value)} label="Seu endereço" required />
+                    <TextField value={description} onChange={e => setDescription(e.target.value)} label="Descrição" required />
+                    <TextField value={specialization} onChange={e => setSpecialization(e.target.value)} label="Sua Especialização" required />
+                    </MuiThemeProvider>
+                    </div>
                     <button type="submit">Cadastrar</button>
                 </form>
             </div>
