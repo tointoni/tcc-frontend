@@ -60,7 +60,7 @@ export default function LoginClient() {
 
                 <form onSubmit={handleLogin}>
                     <div className="content-form">
-                    <label className="email" htmlFor="email">Email</label>
+                    <label className="email" htmlFor="email">Email:</label>
                     <input 
                         name="email"
                         id="email"
@@ -70,7 +70,7 @@ export default function LoginClient() {
                         required 
                         />
 
-                    <label className="senha" htmlFor="senha">Senha</label>
+                    <label className="senha" htmlFor="senha">Senha:</label>
                     <input 
                         name="senha"
                         id="senha"

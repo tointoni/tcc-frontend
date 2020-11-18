@@ -8,8 +8,12 @@ import VoltarImg from '../../img/voltar.webp';
 export default function Cad() {
     document.title = 'Cadastrar'
 
+    const estilo = {
+        overflow: 'hidden',
+    }
+
     return (
-        <div className="conteiner-cad">
+        <div className="conteiner-cad" style={estilo}>
             
             <div className="conteiner-grid1">
                 <div className="grid1">

@@ -92,14 +92,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endCol
 }
 
 .espc h2 {
-    margin-left: 45%;
+    margin-left: 40%;
     margin-bottom: 10%;
 }
 
 .content-servico{
     display: flex;
     flex-direction: column 1fr 1fr;
-    margin-left: 25%;
+    margin-left: 20%;
     column-gap: 20%;
 }
 
