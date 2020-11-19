@@ -12,7 +12,7 @@ import '../../css/global.css';
 import '../../css/listaservicos.css';
 
 export default function Dashboard({ history }) {
-    document.title = 'Dashboard | Técnicos 24H'
+    document.title = 'Dashboard | TECNICOS24H'
 
     const clientname = localStorage.getItem('clientname');
     const token = localStorage.getItem('token');

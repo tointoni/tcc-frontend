@@ -76,3 +76,21 @@
 .buttonn:hover{
     background-color: #1D5D99;
 }
+
+@media(max-width: 600px){
+    .conteiner-perfil{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 20%;
+    }
+    .conteiner-perfil #img{
+        margin-left: 20%;
+    }
+    .conteiner-perfil hr{
+        display: none;
+    }
+    .buttonn{
+        margin-top: 15%;
+        margin-bottom: 5%;
+    }
+}

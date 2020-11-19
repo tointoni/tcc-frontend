@@ -8,7 +8,7 @@ import serviçosIgm from '../../img/servicos.png';
 import negociarImg from '../../img/negociar.jpeg';
 
 function home() {
-    document.title = 'Técnicos 24H'
+    document.title = 'TECNICOS24H'
 
     return (
         <div className="container">
@@ -17,7 +17,7 @@ function home() {
 
                 <div className="cont">
                     <img src={logoImg} alt="Técnicos 24H" width="60" />
-                    <h4>Técnicos 24H</h4>
+                    <h4>TECNICOS24H</h4>
                 </div>
 
                 <div className="formu">

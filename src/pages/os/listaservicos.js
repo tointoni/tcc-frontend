@@ -14,7 +14,7 @@ import AddServ from './servico';
 import LoadServ from './servicos';
 
 export default function ListaServicos() {
-    document.title = 'Serviços'
+    document.title = 'Dashboard | TECNICOS24H'
     const history = useHistory();
 
     const [servicos, setServicos] = useState([]);

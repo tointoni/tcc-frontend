@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
+
 import '../../css/login.css';
 
 import api from '../../services/api';
@@ -12,10 +15,18 @@ import { Link, useHistory } from 'react-router-dom';
 
 export default function LoginCommpany() {
     const history = useHistory();
-
-    
         document.title = 'Login'
       
+        const theme = createMuiTheme({
+            palette: {
+              primary: {
+                light: "#2e89d5",
+                main: "#2677C3",
+                dark: "#1f66b1",
+                contrastText: "#fff",
+              },
+            },
+          });
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -42,7 +53,7 @@ export default function LoginCommpany() {
             <div className="cabe">
                 <div className="conte">
                     <img src={logoImg} alt="Técnicos 24H" width="60" />
-                    <h4>Técnicos 24H</h4>
+                    <h4>TECNICOS24H</h4>
                 </div>
                 <div className="type-login">
             <Link to="/sign-client" className="linkq">Logar como cliente</Link>
@@ -59,25 +70,26 @@ export default function LoginCommpany() {
 
                 <form onSubmit={handleLogin}>
                 <div className="content-form">
-                    <label className="email" htmlFor="email">Email</label>
-                    <input 
-                        name="email"
-                        id="email"
-                        value={email}
-                        onChange={e => setEmail(e.target.value)} 
-                        type="email"  
-                        required 
-                        />
-
-                    <label className="senha" htmlFor="senha">Senha</label>
-                    <input 
-                        name="senha"
-                        id="senha"
-                        value={password}
-                        onChange={e => setPassword(e.target.value)} 
-                        type="password" 
-                        required 
-                        />
+                <MuiThemeProvider theme={theme}>
+              <TextField
+                size="small"
+                id="standard-basic"
+                label="Seu E-mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                required
+              />
+              <TextField
+                label="Sua Senha"
+                id="standard-basic"
+                size="small"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                required
+              />
+            </MuiThemeProvider>
                         </div>
                     <button type="submit">Logar</button>
                     <div className="content-links">
