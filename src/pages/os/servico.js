@@ -1,64 +1,60 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { useState } from "react";
-import api from '../../services/api';
+import api from "../../services/api";
 
-import { Map, TileLayer, Marker } from 'react-leaflet';
-import Leaflet from 'leaflet';
-import 'leaflet/dist/leaflet.css';
+import { Map, TileLayer, Marker } from "react-leaflet";
+import Leaflet from "leaflet";
+import "leaflet/dist/leaflet.css";
 
-import Delete from '../../img/trash-2.svg';
-import Edit from '../../img/edit-2.svg';
-import mapMarkerImg from '../../img/map-pin.svg';
+import Delete from "../../img/trash-2.svg";
+import Edit from "../../img/edit-2.svg";
+import mapMarkerImg from "../../img/map-pin.svg";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import '../../css/serv.css';
+import "../../css/serv.css";
 
 function Servico(props) {
   const { servico } = props;
 
   const [incidents, setIncidents] = useState([]);
 
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem("token");
 
   async function handleDeleteIncident(_id) {
     try {
       const response = await api.delete(`deletservice/${_id}`, {
         headers: {
           token,
-        }
+        },
       });
 
       const status = response.data.status;
-      alert(`${status}`)
+      alert(`${status}`);
       window.location.reload();
 
-
-      setIncidents(incidents.filter(servico => servico._id !== _id));
+      setIncidents(incidents.filter((servico) => servico._id !== _id));
     } catch {
-    alert("Houve um problema, tente novamente")
+      alert("Houve um problema, tente novamente");
     }
   }
 
   async function handleStts(_id) {
-
     try {
       const response = await api.post(`/sttsclose/${_id}`, {
         headers: {
           token,
-        }
+        },
       });
 
       const status = response.data.status;
-      alert(`${status}`)
+      alert(`${status}`);
       window.location.reload();
 
-
-      setIncidents(incidents.filter(servico => servico._id !== _id));
+      setIncidents(incidents.filter((servico) => servico._id !== _id));
     } catch {
-    alert("Houve um problema, tente novamente")
+      alert("Houve um problema, tente novamente");
     }
-
   }
 
   const mapIcon = Leaflet.icon({
@@ -66,7 +62,7 @@ function Servico(props) {
 
     iconSize: [40, 20],
     iconAnchor: [20, 20],
-  })
+  });
 
   return (
     <li className="dev-item">
@@ -76,32 +72,64 @@ function Servico(props) {
           <span>{servico.description}</span>
           <p className="userphone">{servico.userPhone}</p>
           <p className="user-name">{servico.userName}</p>
-          <strong className="user-payable">{servico.amountPayable ? `R$${servico.amountPayable}` : ''}</strong>
-          
-          <div className="container-info">
-          <p>{servico.Data_services ? `${servico.Data_services.split("T", 1)}` : ''}</p>
-          </div>
-        </div>
+          <strong className="user-payable">
+            {servico.amountPayable ? `R$${servico.amountPayable}` : ""}
+          </strong>
 
-        <div className="conteiner-grid">
-          <img className="delete" src={Delete} title="Deletar" onClick={() => handleDeleteIncident(servico._id)} />
-          <Link to="/updateservice" className="edit"><img className="img-edit" src={Edit} title="Editar" /></Link>
+          <div className="container-info">
+            <p>
+              {servico.Data_services
+                ? `${servico.Data_services.split("T", 1)}`
+                : ""}
+            </p>
+          </div>
+          
         </div>
+        <div className="conteiner-grid">
+            <img
+              className="delete"
+              src={Delete}
+              title="Deletar"
+              onClick={() => handleDeleteIncident(servico._id)}
+            />
+            <Link to="/updateservice" className="edit">
+              <img className="img-edit" src={Edit} title="Editar" />
+            </Link>
+          </div>
       </header>
 
       <div className="conteiner-map">
-        <Map className="map" center={servico.data.location.coordinates} zoom={15}>
-          <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`} />
-          <Marker icon={mapIcon} position={servico.location.coordinates} />
+        <Map
+          className="map"
+          center={[
+            servico.location.coordinates[0],
+            servico.location.coordinates[1],
+          ]}
+          zoom={15}
+        >
+          <TileLayer
+            url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+          />
+          <Marker
+            icon={mapIcon}
+            position={[
+              servico.location.coordinates[0],
+              servico.location.coordinates[1],
+            ]}
+          />
         </Map>
 
         <section className="grid-orden">
-        <button className="status" onClick={() => handleStts(servico._id)}>{servico.status}</button>
-        <p className="orden">ID: {servico.order}</p>
+          <p>
+            {(servico.location.coordinates[0],',',servico.location.coordinates[1])}
+          </p>
+          <button className="status" onClick={() => handleStts(servico._id)}>
+            {servico.status}
+          </button>
+          <p className="orden">ID: {servico.order}</p>
         </section>
       </div>
     </li>
-
   );
 }
 

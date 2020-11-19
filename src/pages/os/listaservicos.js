@@ -31,11 +31,11 @@ export default function ListaServicos() {
     }
 
     const token = localStorage.getItem('token');
+
     useEffect(() => {
         async function loadServicos() {
             const response = await api.get("/services", { headers: { token } });
 
-            
             console.log(response)
             setServicos(response.data);
         }
