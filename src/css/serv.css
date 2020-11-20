@@ -160,11 +160,14 @@ li.dev-item .orden{
       margin-left: 58%;
     }
   }
-
-
   @media(max-width: 550px){
     .conteiner-grid{
       margin-left: 58%;
+    }
+  }
+  @media(max-width: 440px){
+    .conteiner-grid{
+      margin-left: 45%;
     }
   }
  

@@ -45,5 +45,14 @@ main {
     margin-left: -1%;
   }
 }
-  
+@media(max-width: 440px){
+  main ul{
+    margin-right: 5px;
+  }
+}
+@media(max-width: 440px){
+  .conteiner-head1 .conteiner-logo{
+    margin-left: 35%;
+  }
+}
   
