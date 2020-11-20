@@ -17,19 +17,19 @@ main {
   }
   @media(max-width: 1000px){
     main ul{
-      margin-right: -130%;
+      margin-right: -120%;
       margin-left: 20%;
     }
     
   }
   @media(max-width: 830px){
     main ul{
-      margin-right: -100%;
+      margin-right: -90%;
     }
   }
   @media(max-width: 750px){
     main ul{
-      margin-right: -70%;
+      margin-right: -60%;
     }
     
   }
@@ -41,7 +41,7 @@ main {
 
 @media(max-width: 550px){
   main ul{
-    margin-right: -20%;
+    margin-right: -19%;
     margin-left: -1%;
   }
 }

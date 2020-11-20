@@ -121,3 +121,8 @@
       width: 100%;
     }
   }
+  @media(max-width: 650px){
+    .conteiner-head1 .conteiner-sair{
+      margin-left: 75%;
+    }
+  }
