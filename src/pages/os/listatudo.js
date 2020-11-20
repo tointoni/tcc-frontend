@@ -7,7 +7,8 @@ import Leaflet from 'leaflet';
 import mapMarkerImg from '../../img/map-pin.svg';
 
 import 'leaflet/dist/leaflet.css';
-import '../../css/serv.css';
+import '../../css/serv1.css';
+import '../../css/main1.css';
 
 function Allservice(props) {
 
@@ -40,19 +41,21 @@ function Allservice(props) {
 
     return (
         <div>
-            <li className="dev-item">
+            <li className="dev-item1">
                 <header>
-                    <div className="user-info">
+                    <div className="user-info1">
                         <strong>{servico.title}</strong>
                         <span>{servico.description}</span>
-                        <p className="userphone">{servico.userPhone}</p>
-                        <Link to="/perfil" onClick={() => handleShowPerfil(servico.UserClient)} className="user-name">{servico.userName}</Link>
+                        <p className="userphone1">{servico.userPhone}</p>
+                        <Link to="/perfil" onClick={() => handleShowPerfil(servico.UserClient)} className="user-name1">{servico.userName}</Link>
                     </div>
                 </header>
-                <Map center={servico.location.coordinates} zoom={15} style={{ width: '500px', height: '180px' }} className="map" >
+                <div className="conteiner-map1">
+                <Map center={servico.location.coordinates} zoom={15}  className="map1" >
                     <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`} />
                     <Marker icon={mapIcon} position={servico.location.coordinates} />
                 </Map>
+                </div>
             </li>
         </div >
     );

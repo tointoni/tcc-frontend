@@ -76,8 +76,8 @@ export default function ListaServicos() {
                     <LoadServ onSubmit={handleAddServs} />
 
                 </aside>
-                <main>
-                    <ul>
+                <main className="container-main">
+                    <ul className="container-ul">
                     {servicos.map(servico => (
                         <AddServ key={servico._id} servico={servico} />
                      ))}

@@ -55,8 +55,8 @@ export default function Dashboard({ history }) {
                 <button className="conteiner-sair" onClick={handleLogoff} type="submit">Sair</button>
             </div>
             <div id="app">
-                <main>
-                    <ul>
+                <main className="container-main1">
+                    <ul className="container-ul1">
                         {servicos.map(servico => (
                             <List key={servico._id} servico={servico} />
                         ))}
