@@ -39,7 +39,7 @@ export default function ResetPassword() {
     data.append("newPassword", newPassword);
     data.append("password", password);
 
-    await api.post("/resert-passwordcompany", data);
+    await api.post("/updatepasswordcompany", data);
 
     history.push('/sign-company');
   }

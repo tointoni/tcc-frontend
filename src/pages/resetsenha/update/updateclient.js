@@ -40,7 +40,7 @@ export default function ResetPassword() {
     data.append("newPassword", newPassword);
     data.append("password", password);
 
-    await api.post("/resert-passwordclient", data);
+    await api.post("/updatepasswordclient", data);
 
     history.push('/sign-client')
   }
