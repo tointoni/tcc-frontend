@@ -1,0 +1,96 @@
+.container-resetsoli  {
+    background-color: #333;
+    padding: 45px;
+}
+
+.container-resetsoli .container-head2 img {
+    margin-top: -30px;
+    margin-left: 115px;
+    position: absolute;
+}
+
+.container-resetsoli .container-head2 h4 {
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 185px;
+    color: #eee;
+}
+
+.voltar-reset{
+    display: flex;
+    flex-direction: column (2, 1fr);
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.voltar-reset img{
+    cursor: pointer;
+}
+
+.voltar-reset .button-voltar-reset{
+    margin-left: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+}
+
+.container-solicita form.container-form-resetsoli {
+    margin-top: 10%;
+    margin-left: 38%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 10px #bbb;
+    max-width: 300px;
+}
+
+.container-solicita form.container-form-resetsoli p{
+    margin-top: 20px;
+    margin-left: 65px;
+    margin-bottom: 10px;
+    color: #222;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container-solicita form.container-form-resetsoli .input-email-reset{
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.container-solicita form.container-form-resetsoli button{
+    background-color: #2677C3;
+    color: #eee;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 120px;
+    margin-left: -110px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: linear all .3s;
+}
+
+.container-solicita form.container-form-resetsoli button:hover{
+    background-color: #1D5D99;
+    box-shadow: 0px 0px 10px #1D5D99;
+}
+
+@media(max-width: 500px){
+    .container-solicita form.container-form-resetsoli{
+        margin-right: 20%;
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+}
+
+@media(max-width: 350px){
+    .container-solicita form.container-form-resetsoli p{
+        margin-right: 20%;
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+}

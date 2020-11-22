@@ -1,76 +1,80 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 
-import '../../css/login.css';
+import "../../css/login.css";
 
-import api from '../../services/api';
+import api from "../../services/api";
 
-import logoImg from '../../../src/img/logo.png';
-import VoltarImg from '../../img/voltar.webp';
+import logoImg from "../../../src/img/logo.png";
+import VoltarImg from "../../img/voltar.webp";
 
-import { Link, useHistory } from 'react-router-dom';
-
+import { Link, useHistory } from "react-router-dom";
 
 export default function LoginCommpany() {
-    const history = useHistory();
-        document.title = 'Login'
-      
-        const theme = createMuiTheme({
-            palette: {
-              primary: {
-                light: "#2e89d5",
-                main: "#2677C3",
-                dark: "#1f66b1",
-                contrastText: "#fff",
-              },
-            },
-          });
+  const history = useHistory();
+  document.title = "Login";
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+  const theme = createMuiTheme({
+    palette: {
+      primary: {
+        light: "#2e89d5",
+        main: "#2677C3",
+        dark: "#1f66b1",
+        contrastText: "#fff",
+      },
+    },
+  });
 
-    async function handleLogin(e) {
-        e.preventDefault();
-   
-            const response = await api.post('/sign-company', { email, password })
-            const {name} = response.data;
-            const status = response.data.status;
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-            localStorage.setItem('token', response.data.token);
-            localStorage.setItem('clientname', name);
+  async function handleLogin(e) {
+    e.preventDefault();
 
-            alert(`${status}`);
+    const response = await api.post("/sign-company", { email, password });
+    const { name } = response.data;
+    const status = response.data.status;
 
-            if (response.data.token){
-                history.push('/dashcommpany')
-            }
+    localStorage.setItem("token", response.data.token);
+    localStorage.setItem("clientname", name);
+
+    alert(`${status}`);
+
+    if (response.data.token) {
+      history.push("/dashcommpany");
     }
+  }
 
-    return (
-        <div>
-            <div className="cabe">
-                <div className="conte">
-                    <img src={logoImg} alt="Técnicos 24H" width="60" />
-                    <h4>TECNICOS24H</h4>
-                </div>
-                <div className="type-login">
-            <Link to="/sign-client" className="linkq">Logar como cliente</Link>
-                </div>
-            </div>
+  return (
+    <div>
+      <div className="cabe">
+        <div className="conte">
+          <img src={logoImg} alt="Técnicos 24H" width="60" />
+          <h4>TECNICOS24H</h4>
+        </div>
+        <div className="type-login">
+          <Link to="/sign-client" className="linkq">
+            Logar como cliente
+          </Link>
+        </div>
+      </div>
 
-            <div className="voltar-login">
-                <Link to="/"><img src={VoltarImg} width="20" alt="voltar" /></Link>
-                <Link to="/"><button>Voltar</button></Link>
-            </div>
-            
+      <div className="voltar-login">
+        <Link to="/">
+          <img src={VoltarImg} width="20" alt="voltar" />
+        </Link>
+        <Link to="/">
+          <button>Voltar</button>
+        </Link>
+      </div>
 
-            <div className="formular">
-
-                <form onSubmit={handleLogin}>
-                <div className="content-form">
-                <MuiThemeProvider theme={theme}>
+      <div className="formular">
+        <p>Login Empresa</p>
+        <form onSubmit={handleLogin}>
+          <div className="content-form">
+            <MuiThemeProvider theme={theme}>
               <TextField
                 size="small"
                 id="standard-basic"
@@ -90,14 +94,18 @@ export default function LoginCommpany() {
                 required
               />
             </MuiThemeProvider>
-                        </div>
-                    <button type="submit">Logar</button>
-                    <div className="content-links">
-                    <Link to="/cadastro" className="linkw">Não tem uma conta?</Link>
-                    <Link to="/reset-password" className="conteiner-reset">Esqueci minha senha</Link>
-                        </div>
-                </form>
-            </div>
-        </div>
-    );
+          </div>
+          <button type="submit">Logar</button>
+          <div className="content-links">
+            <Link to="/cadastro" className="linkw">
+              Não tem uma conta?
+            </Link>
+            <Link to="/reset-password-commpany" className="conteiner-reset">
+              Esqueci minha senha
+            </Link>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
 }

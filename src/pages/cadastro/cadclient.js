@@ -85,7 +85,7 @@ function Cadastro({ history }) {
       <div className="cabe">
         <div className="conte">
           <img src={logoImg} alt="Técnicos 24H" width="60" />
-          <h4>Técnicos 24H</h4>
+          <h4>TECNICO24H</h4>
         </div>
       </div>
 

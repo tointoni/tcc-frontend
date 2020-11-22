@@ -26,8 +26,11 @@ import NotFound from './pages/notfound';
 import Listatudo from './pages/os/listatudo';
 
 import Upadate from './pages/os/updateos';
-import ResetPassword from './pages/resetsenha/resetpassword';
 
+import resetclient from './pages/resetsenha/resetclient';
+import resetcommpany from './pages/resetsenha/resetclient';
+import updatepasswordCliente from './pages/resetsenha/update/updateclient';
+import updatepasswordCommpany from './pages/resetsenha/update/updatecommpany';
 
 
 const Routes = () => 
@@ -43,7 +46,12 @@ const Routes = () =>
 
                 <Route path="/sign-client"  component={loginclient} />
                 <Route path="/sign-company" component={logincommpany} />
-                <Route path="/reset-password" component={ResetPassword} />
+           
+                <Route path="/reset-password-client" component={resetclient} />
+                <Route path="/reset-password-commpany" component={resetcommpany} />
+
+                <Route path="/update-password-client" component={updatepasswordCliente} />
+                <Route path="/update-password-commpany" component={updatepasswordCommpany} />
 
                 <Route path="/dashclient"  component={ListaServicos} />
                 <Route path="/dashcommpany" component={dashcommpany} />

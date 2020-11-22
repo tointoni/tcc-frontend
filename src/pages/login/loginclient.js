@@ -71,6 +71,7 @@ export default function LoginClient() {
       </div>
 
       <div className="formular">
+        <p>Login Cliente</p>
         <form onSubmit={handleLogin} autoComplete="off">
           <div className="content-form">
             <MuiThemeProvider theme={theme}>
@@ -99,7 +100,7 @@ export default function LoginClient() {
             <Link to="/cadastro" className="linkw">
               Não tem uma conta?
             </Link>
-            <Link to="/reset-password" className="conteiner-reset">
+            <Link to="/reset-password-client" className="conteiner-reset">
               Esqueci minha senha
             </Link>
           </div>
