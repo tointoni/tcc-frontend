@@ -10,7 +10,7 @@ import VoltarImg from "../../img/voltar.webp";
 import logoImg from "../../../src/img/logo.png";
 import '../../css/resetsolici.css';
 
-export default function ResetPassword() {
+export default function ResetPasswordCommpany() {
   const history = useHistory();
 
   const theme = createMuiTheme({
@@ -28,12 +28,13 @@ export default function ResetPassword() {
 
   const [email, setEmail] = useState("");
 
-  async function handleReset(e) {
+  async function handleResetCommpany(e) {
     e.preventDefault();
-
+try{
     await api.post("/resert-passwordcompany", { email });
+}catch{}
+history.push("/update-password-commpany");
 
-    history.push("/update-password-commpany");
   }
 
   return (
@@ -55,7 +56,7 @@ export default function ResetPassword() {
         </Link>
       </div>
 
-      <form className="container-form-resetsoli" onSubmit={handleReset}>
+      <form className="container-form-resetsoli" onSubmit={handleResetCommpany}>
         <p>Recuperar senha</p>
         <MuiThemeProvider theme={theme} className="muitheme">
           <Tooltip

@@ -8,9 +8,9 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 import VoltarImg from "../../../img/voltar.webp";
 import logoImg from "../../../../src/img/logo.png";
-import '../../../css/updatepassword.css'
+import '../../../css/updatepassword.css';
 
-export default function ResetPassword() {
+export default function UpdatePassword() {
   const history = useHistory();
 
   const theme = createMuiTheme({
@@ -27,22 +27,18 @@ export default function ResetPassword() {
   document.title = "Recuperação de senha"
 
   const [email, setEmail] = useState("");
-  const [token, setToken] = useState("");
+  const [tokenCode, setTokencode] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [password, setPassword] = useState("");
 
-  async function handleReset(e) {
+  async function handleUpdate(e) {
     e.preventDefault();
-    const data = new FormData();
-
-    data.append("email", email);
-    data.append("token", token);
-    data.append("newPassword", newPassword);
-    data.append("password", password);
-
-    await api.post("/resert-passwordclient", data);
+    
+    try{
+    await api.post("/updatepasswordclient", {email, tokenCode, newPassword, password});
 
     history.push('/sign-client')
+    }catch{}
   }
 
   return (
@@ -64,12 +60,11 @@ export default function ResetPassword() {
         </Link>
       </div>
 
-      <form className="container-form-update" onSubmit={handleReset}>
+      <form className="container-form-update" onSubmit={handleUpdate}>
         <p>Recuperar senha</p>
         <MuiThemeProvider theme={theme}>
             <Tooltip title="Insira o E-mail">
             <TextField
-              name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               color="primary"
@@ -83,9 +78,8 @@ export default function ResetPassword() {
 
             <Tooltip title="Digite seu token">
             <TextField
-              name="token"
-              value={token}
-              onChange={(e) => setToken(e.target.value)}
+              value={tokenCode}
+              onChange={(e) => setTokencode(e.target.value)}
               color="primary"
               label="Token"
               className="input-camp-update"
@@ -97,7 +91,6 @@ export default function ResetPassword() {
 
             <Tooltip title="Digite sua nova senha">
             <TextField
-              name="password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
               color="primary"
@@ -111,7 +104,6 @@ export default function ResetPassword() {
 
             <Tooltip title="Repita sua senha">
             <TextField
-              name="newpassword"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               color="primary"

@@ -102,8 +102,7 @@ function Servico(props) {
         <Map
           className="map"
           center={[
-            servico.location.coordinates[0],
-            servico.location.coordinates[1],
+            -3.0548391, -59.9429666
           ]}
           zoom={15}
         >
@@ -113,15 +112,13 @@ function Servico(props) {
           <Marker
             icon={mapIcon}
             position={[
-              servico.location.coordinates[0],
-              servico.location.coordinates[1],
+              -3.0548391, -59.9429666
             ]}
           />
         </Map>
 
         <section className="grid-orden">
           <p>
-            {(servico.location.coordinates[0],',',servico.location.coordinates[1])}
           </p>
           <button className="status" onClick={() => handleStts(servico._id)}>
             {servico.status}

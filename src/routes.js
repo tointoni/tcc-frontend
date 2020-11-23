@@ -28,15 +28,19 @@ import Listatudo from './pages/os/listatudo';
 import Upadate from './pages/os/updateos';
 
 import resetclient from './pages/resetsenha/resetclient';
-import resetcommpany from './pages/resetsenha/resetclient';
+import resetcommpany from './pages/resetsenha/resetcompany';
 import updatepasswordCliente from './pages/resetsenha/update/updateclient';
 import updatepasswordCommpany from './pages/resetsenha/update/updatecommpany';
 
+
+import Teste from './pages/teste';
 
 const Routes = () => 
     (
         <BrowserRouter>
             <Switch>
+                <Route path="/teste" exact component={Teste}/>
+
                 <Route path="/" exact component={home}/>
 
                 <Route path="/cadastro"  component={cadastro} />
@@ -47,11 +51,11 @@ const Routes = () =>
                 <Route path="/sign-client"  component={loginclient} />
                 <Route path="/sign-company" component={logincommpany} />
            
-                <Route path="/reset-password-client" component={resetclient} />
-                <Route path="/reset-password-commpany" component={resetcommpany} />
+                <Route path="/reset-password-client" exact component={resetclient} />
+                <Route path="/reset-password-commpany" exact component={resetcommpany} />
 
-                <Route path="/update-password-client" component={updatepasswordCliente} />
-                <Route path="/update-password-commpany" component={updatepasswordCommpany} />
+                <Route path="/update-password-client" exact component={updatepasswordCliente} />
+                <Route path="/update-password-commpany" exact component={updatepasswordCommpany} />
 
                 <Route path="/dashclient"  component={ListaServicos} />
                 <Route path="/dashcommpany" component={dashcommpany} />
