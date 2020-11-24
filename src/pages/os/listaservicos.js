@@ -47,11 +47,9 @@ export default function ListaServicos() {
     async function handleAddServs(data) {
         const response = await api.post("/service", data, { headers: { token } });
 
-        setServicos([...servicos, response.data]);
         const status = response.data.status;
         
         alert(`${status}`)
-      window.location.reload();
 
     }
     

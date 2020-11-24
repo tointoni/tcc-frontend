@@ -90,10 +90,10 @@ function Cadastro({ history }) {
       </div>
 
       <div className="voltar-cad">
-        <Link to="/cadastro">
+        <Link to="/">
           <img src={VoltarImg} width="20" alt="voltar" />
         </Link>
-        <Link to="/cadastro">
+        <Link to="/">
           <button>Voltar</button>
         </Link>
       </div>
@@ -218,6 +218,7 @@ function Cadastro({ history }) {
           <button type="submit">Cadastrar</button>
         </form>
       </div>
+      <div className="footer"></div>
     </div>
   );
 }

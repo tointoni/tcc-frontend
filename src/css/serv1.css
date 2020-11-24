@@ -100,8 +100,7 @@ li.dev-item1 {
 }
 
 .grid-orden{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin-left: 20%;
 }
 
 li.dev-item1 .conteiner-map1{
@@ -157,9 +156,8 @@ li.dev-item1 .orden{
     }
   }
   @media(max-width: 750px){
-    .conteiner-grid{
-      margin-top: -30%;
-      margin-left: 65%;
+    .grid-orden p.orden{
+      margin-right: -90%;
     }
   }
   @media(max-width: 650px){

@@ -28,11 +28,12 @@
 }
 
 .formu button {
-    padding: 5px 10px;
+    padding: 6px 10px;
     background-color: rgba(51, 51, 51, 0.425);
     border-radius: 5px;
     margin-right: 10%;
     color: #eee;
+    font-size: 13px;
     text-decoration: none;
     border: 1px rgba(255, 255, 255, 0.575) solid;
     cursor: pointer;
@@ -43,6 +44,11 @@
     background-color: #2677C3;
     box-shadow: 0px 0px 10px #2677C3;
     border: #2677C3 solid 1px;
+}
+
+.formu .simple-menu{
+    padding: 5px 5px;
+    font-size: 11px;
 }
 
 .tras {

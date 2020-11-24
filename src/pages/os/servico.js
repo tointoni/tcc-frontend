@@ -2,13 +2,8 @@
 import React, { useState } from "react";
 import api from "../../services/api";
 
-import { Map, TileLayer, Marker } from "react-leaflet";
-import Leaflet from "leaflet";
-import "leaflet/dist/leaflet.css";
-
 import Delete from "../../img/trash-2.svg";
 import Edit from "../../img/edit-2.svg";
-import mapMarkerImg from "../../img/map-pin.svg";
 
 import { Link } from "react-router-dom";
 
@@ -57,13 +52,7 @@ function Servico(props) {
     }
   }
 
-  const mapIcon = Leaflet.icon({
-    iconUrl: mapMarkerImg,
-
-    iconSize: [40, 20],
-    iconAnchor: [20, 20],
-  });
-
+  
   return (
     <li className="dev-item">
       <header className="dev-grid">
@@ -99,27 +88,10 @@ function Servico(props) {
       </header>
 
       <div className="conteiner-map">
-        <Map
-          className="map"
-          center={[
-            -3.0548391, -59.9429666
-          ]}
-          zoom={15}
-        >
-          <TileLayer
-            url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
-          />
-          <Marker
-            icon={mapIcon}
-            position={[
-              -3.0548391, -59.9429666
-            ]}
-          />
-        </Map>
+      <a id="map" href={`https://www.google.com/maps/@${servico.location.coordinates}`} target="_blank">Abrir no mapa</a>
 
         <section className="grid-orden">
-          <p>
-          </p>
+          
           <button className="status" onClick={() => handleStts(servico._id)}>
             {servico.status}
           </button>

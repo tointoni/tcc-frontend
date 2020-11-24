@@ -214,7 +214,9 @@ export default function EditClient() {
             Alterar
           </button>
         </form>
+
       </div>
+
     </div>
   );
 }

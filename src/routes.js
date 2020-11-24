@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import home from './pages/home/home';
 
-import cadastro from './pages/cadastro/cad';
 import cadclient from './pages/cadastro/cadclient';
 import cadcompany from './pages/cadastro/cadcompany';
 
@@ -42,8 +41,6 @@ const Routes = () =>
                 <Route path="/teste" exact component={Teste}/>
 
                 <Route path="/" exact component={home}/>
-
-                <Route path="/cadastro"  component={cadastro} />
 
                 <Route path="/client-signup"  component={cadclient}/>
                 <Route path="/company-signup"  component={cadcompany} />

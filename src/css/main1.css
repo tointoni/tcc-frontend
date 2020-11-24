@@ -17,24 +17,24 @@
   }
   @media(max-width: 1000px){
     .container-main1 .container-ul1{
-      margin-right: -420%;
+      margin-right: -110%;
       margin-left: 20%;
     }
   }
   @media(max-width: 950px){
     .container-main1 .container-ul1{
-      margin-right: -370%;
+      margin-right: -90%;
       margin-left: 20%;
     }
   }
   @media(max-width: 870px){
     .container-main1 .container-ul1{
-      margin-right: -330%;
+      margin-right: -70%;
     }
   }
   @media(max-width: 800px){
     .container-main1 .container-ul1{
-      margin-right: -280%;
+      margin-right: -60%;
       margin-left: 20%;
     }
   }

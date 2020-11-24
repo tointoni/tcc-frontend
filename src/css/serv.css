@@ -89,16 +89,6 @@ li.dev-item {
     max-width: 20px;
   }
 
-  .leaflet-touch .leaflet-bar a {
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-}
-
-.leaflet-control-attribution a{
-  display: none;
-}
-
 .grid-orden{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -112,13 +102,17 @@ li.dev-item .conteiner-map{
   gap: 10px;
 }
 
-li.dev-item .conteiner-map .leaflet-container{
-  height: 200px;
+.conteiner-map #map{
+  text-decoration: none;
+  color: #2677C3;
+  font-weight: bold;
+  margin-left: 120px;
+  margin-top: 15px;
 }
 
 li.dev-item .status{
-  margin-left: 10px;
-  margin-top: 5px;
+  margin-left: -70px;
+  margin-top: 10px;
   font-size: 14px;
   font-weight: bold;
   max-width: 70px;
@@ -129,8 +123,8 @@ li.dev-item .status{
 }
 
 li.dev-item .orden{
-  margin-left: 120px;
-  margin-top: 5px;
+  margin-left: 90px;
+  margin-top: 10px;
   font-size: 14px;
 }
 
@@ -143,34 +137,44 @@ li.dev-item .orden{
 
   @media(max-width: 1000px){
     .conteiner-grid{
-      margin-left: 600px;
+      margin-left: 500px;
       margin-top: -80px;
     }
   }
   @media(max-width: 830px){
     .conteiner-grid{
-      margin-left: 500px;
+      margin-left: 400px;
     }
   }
   @media(max-width: 750px){
     .conteiner-grid{
       margin-top: -80px;
-      margin-left: 400px;
+      margin-left: 280px;
     }
   }
   @media(max-width: 650px){
     .conteiner-grid{
-      margin-left: 320px;
+      margin-left: 230px;
     }
   }
   @media(max-width: 550px){
     .conteiner-grid{
-      margin-left: 320px;
+      margin-left: 220px;
     }
   }
   @media(max-width: 440px){
     .conteiner-grid{
-      margin-left: 260px;
+      margin-left: 180px;
+    }
+    .conteiner-map #map{
+      margin-right: 70px;
+    }
+    .grid-orden{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .grid-orden .status{
+      margin-left: -80px;
     }
   }
   @media(max-width: 410px){
