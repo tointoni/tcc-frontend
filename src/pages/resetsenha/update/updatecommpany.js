@@ -34,17 +34,20 @@ export default function UpdatePassword1() {
   async function handleUpdate(e) {
     e.preventDefault();
 
-<<<<<<< HEAD
+    const token = localStorage.getItem("token");
+
+
     try{
     await api.post("/updatepasswordcompany", {email, tokenCode, newPassword, password});
-=======
+    const data = new FormData();
+
     data.append("email", email);
     data.append("token", token);
     data.append("newPassword", newPassword);
     data.append("password", password);
 
     await api.post("/updatepasswordcompany", data);
->>>>>>> 977e622bbb46661e18ae3c24ba66762df0432959
+
 
     history.push('/sign-company');
     }catch{}
