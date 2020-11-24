@@ -33,11 +33,11 @@ export default function UpdatePassword() {
 
   async function handleUpdate(e) {
     e.preventDefault();
-<<<<<<< HEAD
+  const token = localStorage.getItem("token");
     
     try{
     await api.post("/updatepasswordclient", {email, tokenCode, newPassword, password});
-=======
+
     const data = new FormData();
 
     data.append("email", email);
@@ -46,7 +46,6 @@ export default function UpdatePassword() {
     data.append("password", password);
 
     await api.post("/updatepasswordclient", data);
->>>>>>> 977e622bbb46661e18ae3c24ba66762df0432959
 
     history.push('/sign-client')
     }catch{}
