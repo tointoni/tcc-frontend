@@ -31,6 +31,9 @@ import resetcommpany from './pages/resetsenha/resetcompany';
 import updatepasswordCliente from './pages/resetsenha/update/updateclient';
 import updatepasswordCommpany from './pages/resetsenha/update/updatecommpany';
 
+import Duvidas from './pages/conteudo/duvidas';
+import Privacidade from './pages/conteudo/privacidade';
+
 
 import Teste from './pages/teste';
 
@@ -66,6 +69,9 @@ const Routes = () =>
 
                 <Route path="/list-service"  component={Listatudo} />
                 <Route path="/updateservice" component={Upadate} />
+
+                <Route path="/duvidas" component={Duvidas} />
+                <Route path="/privacidade" component={Privacidade} />
 
                 <Route path="/" component={NotFound} />
             </Switch>

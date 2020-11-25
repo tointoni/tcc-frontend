@@ -41,9 +41,12 @@ export default function LoginClient() {
     localStorage.setItem("clientname", name);
 
     alert(`${status}`);
-
+    
     if (response.data.token) {
       history.push("/dashclient");
+      return(
+        <p>okay</p>
+        );
     }
   }
 

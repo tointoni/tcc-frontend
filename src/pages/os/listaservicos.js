@@ -36,7 +36,7 @@ export default function ListaServicos() {
         async function loadServicos() {
             const response = await api.get("/services", { headers: { token } });
 
-            console.log(response.data.location);
+            console.log(response.data._id);
             console.log(response.data);
             setServicos(response.data);
             

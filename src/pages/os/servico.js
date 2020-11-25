@@ -12,29 +12,30 @@ import "../../css/serv.css";
 function Servico(props) {
   const { servico } = props;
 
-  const [incidents, setIncidents] = useState([]);
-
+  const [deleta, setDeleta] = useState([]);
+  const [stats, setStatus] = useState([]);
   const token = localStorage.getItem("token");
 
   async function handleDeleteIncident(_id) {
+
     try {
       const response = await api.delete(`deletservice/${_id}`, {
         headers: {
           token,
         },
       });
-
       const status = response.data.status;
       alert(`${status}`);
       window.location.reload();
 
-      setIncidents(incidents.filter((servico) => servico._id !== _id));
+      setDeleta(deleta.filter((servico) => servico._id !== _id));
     } catch {
       alert("Houve um problema, tente novamente");
     }
   }
 
   async function handleStts(_id) {
+    
     try {
       const response = await api.post(`/sttsclose/${_id}`, {
         headers: {
@@ -42,11 +43,12 @@ function Servico(props) {
         },
       });
 
-      const status = response.data.status;
+      console.log(token)
+      const status = response.status;
       alert(`${status}`);
       window.location.reload();
 
-      setIncidents(incidents.filter((servico) => servico._id !== _id));
+      setStatus(stats.filter((servico) => servico._id !== _id));
     } catch {
       alert("Houve um problema, tente novamente");
     }

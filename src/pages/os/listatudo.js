@@ -55,6 +55,16 @@ function Allservice(props) {
             >
               {servico.userName}
             </Link>
+            <strong className="user-payable">
+            {servico.amountPayable ? `R$${servico.amountPayable}` : ""}
+          </strong>
+          <div className="container-info">
+            <p>
+              {servico.Data_services
+                ? `${servico.Data_services.split("T", 1)}`
+                : ""}
+            </p>
+          </div>
           </div>
         </header>
         <div className="conteiner-map1">

@@ -12,7 +12,7 @@ import serviçosIgm from "../../img/servicos.png";
 import negociarImg from "../../img/negociar.jpeg";
 
 function Home() {
-  document.title = "TECNICOS24H";
+  document.title = "TECNICO24H";
   const history = useHistory();
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -125,12 +125,12 @@ function Home() {
               <h3 className="h3">Dúvidas</h3>
               <p className="p">
                 <i>
-                  Você esqueceu a senha de seu equipamentoou teve algum
+                  Você esqueceu a senha de seu equipamento ou teve algum
                   problema? Podemos tirar sua dúvida basta clicar no link
                   abaixo.
                 </i>
               </p>
-              <a href="#">Dúvida</a>
+              <Link to="/duvidas" className="div-link" target="_blank">Dúvidas</Link>
             </div>
           </div>
         </div>
@@ -138,7 +138,7 @@ function Home() {
       <div className="footer">
         <div className="div1">
           <h5>Serviços</h5>
-          <a href="#">Dúvidas</a>
+          <Link to="/duvidas" className="div-link" target="_blank">Dúvidas</Link>
           <ul>
             <li>
               <a href="#">FAQ</a>
@@ -148,7 +148,7 @@ function Home() {
 
         <div className="div2">
           <h5>Informações</h5>
-          <a href="#">Política de privacidade</a>
+          <Link to="/privacidade" target="_blank">Política de privacidade</Link>
           <ul>
             <li>
               <a href="#">Termos & condições</a>
@@ -161,7 +161,7 @@ function Home() {
 
         <div className="div3">
           <h5>Contatos</h5>
-          <p>tecnicos24h@hotmail.com</p>
+          <p>tecnico24h.com@gmail.com</p>
           <p>+55 (92) 99999-9999</p>
         </div>
       </div>
